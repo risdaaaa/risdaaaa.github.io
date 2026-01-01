@@ -1,0 +1,287 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= BODY ================= */
+body {
+  background: #e6f6f3;
+  color: #000;
+}
+
+/* ================= NAVBAR ================= */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 60px;
+  background: #eafaf7;
+  border-bottom: 3px solid #000;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 40px;
+
+  z-index: 1000;
+}
+
+.nav-right a {
+  margin-left: 28px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #000;
+}
+
+.nav-right a.active {
+  background: #000;
+  color: #fff;
+  padding: 4px 8px;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+
+  width: 300px;
+  height: calc(100vh - 60px);
+  padding: 30px;
+
+  background: #eafaf7;
+  overflow-y: auto;
+}
+
+/* vertical line */
+.sidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: #000;
+}
+
+.avatar {
+  width: 140px;
+  border: 3px solid #000;
+  margin-bottom: 15px;
+}
+
+.role {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 2px solid #000;
+  margin-bottom: 25px;
+}
+
+/* ================= CONTACT ================= */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.pixel-icon {
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+}
+
+.contact-link {
+  color: #000;
+  text-decoration: underline;
+}
+
+.contact-link:hover {
+  background: #000;
+  color: #fff;
+  padding: 2px 4px;
+}
+
+/* ================= MAIN ================= */
+.main {
+  margin-top: 60px;
+  margin-left: 300px;
+  padding: 40px;
+}
+
+/* ================= WINDOW ================= */
+.window {
+  border: 3px solid #000;
+  background: #fff;
+  margin-bottom: 35px;
+}
+
+.title-bar {
+  padding: 8px 14px;
+  border-bottom: 3px solid #000;
+  background: #f4f4f4;
+  font-weight: bold;
+}
+
+/* ================= ABOUT ================= */
+.about-content {
+  padding: 20px;
+  line-height: 1.7;
+}
+
+.about-content strong {
+  background: #000;
+  color: #fff;
+  padding: 2px 6px;
+}
+
+/* ================= WHAT I'M DOING ================= */
+.doing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  padding: 20px;
+}
+
+.doing-card {
+  border: 3px solid #000;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.doing-icon {
+  width: 28px;
+  height: 28px;
+  image-rendering: pixelated;
+}
+
+.doing-card h3 {
+  margin: 10px 0 6px;
+}
+
+.doing-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+/* ================= TECH STACK ================= */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  padding: 20px;
+}
+
+.tech-card {
+  border: 3px solid #000;
+  padding: 18px;
+  background: #fff;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.tech-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar::after {
+    display: none;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .doing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= TIMELINE (FINAL FIX) ================= */
+
+.timeline {
+  position: relative;
+  padding: 30px 20px;
+}
+
+/* vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 3px;
+  height: calc(100% - 30px);
+  background: #000;
+}
+
+/* item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 60px; /* ⬅️ INI KUNCI UTAMA */
+}
+
+/* bullet */
+.dot {
+  position: absolute;
+  left: 14px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+}
+
+/* content */
+.timeline-content {
+  display: block;
+}
+
+/* title */
+.timeline-content h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+/* role */
+.role-exp {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* date */
+.time {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+}
+
+/* description */
+.timeline-content p {
+  margin: 6px 0;
+  line-height: 1.6;
+  max-width: 900px;
+}
