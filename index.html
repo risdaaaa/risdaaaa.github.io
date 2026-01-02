@@ -11,6 +11,17 @@
 
   <!-- ================= NAVBAR ================= -->
   <nav class="top-nav">
+
+    <!-- KIRI : ANIMASI -->
+    <div class="nav-fun">
+      <img src="assets/cat.png" alt="mascot" class="nav-mascot" />
+      <div class="nav-status">
+        <span class="dot-online"></span>
+        <span class="status-text">ONLINE</span>
+      </div>
+    </div>
+
+    <!-- KANAN : MENU -->
     <div class="nav-right">
       <a href="index.html" class="active">ABOUT</a>
       <a href="resume.html">RESUME</a>
@@ -18,13 +29,23 @@
       <a href="certificate.html">CERTIFICATE</a>
       <a href="contact.html">CONTACT</a>
     </div>
+
   </nav>
 
   <!-- ================= SIDEBAR ================= -->
-  <aside class="sidebar">
-    <img src="assets/avatar.jpeg" alt="Avatar" class="avatar">
+  <aside class="sidebar fun-sidebar">
+    <video
+      class="avatar avatar-video"
+      src="assets/avatar.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
 
-    <h2>Dwi Krisdanarti</h2>
+    <h2 class="typing-name">
+      <span id="typing-text"></span><span class="cursor">▮</span>
+    </h2>
     <span class="role">Data Analyst & Data Science Enthusiast</span>
 
     <div class="info">
@@ -51,16 +72,16 @@
     </div>
     <!-- ================= SOCIAL LINKS ================= -->
     <div class="social-links">
-      <a href="https://github.com/risdaaaa" target="_blank">
-        <img src="assets/icons/github.jpg" alt="GitHub" class="social-icon">
+      <a href="https://github.com/risdaaaa" target="_blank" data-label="GitHub">
+        <img src="assets/icons/github.jpg" class="social-icon">
       </a>
 
-      <a href="https://www.kaggle.com/risdaaaa" target="_blank">
-        <img src="assets/icons/kaggle.png" alt="Kaggle" class="social-icon">
+      <a href="https://www.kaggle.com/risdaaaa" target="_blank" data-label="Kaggle">
+        <img src="assets/icons/kaggle.png" class="social-icon">
       </a>
 
-      <a href="https://www.linkedin.com/in/dwi-krisdanarti/" target="_blank">
-        <img src="assets/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+      <a href="https://www.linkedin.com/in/dwi-krisdanarti/" target="_blank" data-label="LinkedIn">
+        <img src="assets/icons/linkedin.png" class="social-icon">
       </a>
     </div>
 
@@ -75,23 +96,25 @@
 
       <div class="about-content">
         <p>
-          Informatics Engineering student with a strong interest in
-          <strong>Data Science</strong>, focusing on machine learning,
-          data analysis, and data-driven problem solving.
+          Informatics Engineering student at Universitas Negeri Semarang with a strong
+          interest in <strong>Data Analysis</strong> and <strong>Data Science</strong>,
+          focusing on extracting insights and supporting data-driven decision making.
         </p>
 
         <p>
-          Experienced as a
-          <strong>Data Science & Analyst at PT PLN (Persero) UP MLEB</strong>,
-          working with multi-source operational data and developing
-          real-time dashboards to support decision-making.
+          Experienced in <strong>data analysis, dashboard development, and applied
+          machine learning projects</strong>, including <strong>BISINDO hand gesture
+          recognition</strong>, recommendation systems, and interactive data
+          applications.
         </p>
 
         <p>
-          Proficient in <strong>TensorFlow, Pandas, SQL</strong>, and
-          <strong>Looker Studio</strong>, with hands-on experience from
-          <strong>Bangkit Academy 2024</strong> and
-          <strong>Dibimbing Data Science Bootcamp</strong>.
+          Completed internships as a <strong>Data Science & Analyst at PT PLN (Persero)
+          UP MLEB</strong> and a <strong>Marketing & Web Developer at PT Aspal Polimer
+          Emulsindo</strong>, and participated as a <strong>Machine Learning cohort at
+          Bangkit Academy</strong>. Proficient in <strong>Python, SQL, data
+          visualization</strong>, and continuously developing skills to grow in data
+          focused roles.
         </p>
       </div>
     </section>
@@ -181,6 +204,6 @@
     </section>
 
   </main>
-
+<script src="js/script.js"></script>
 </body>
 </html>

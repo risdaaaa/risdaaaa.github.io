@@ -8,21 +8,42 @@
 <body>
 
 <!-- ================= NAVBAR ================= -->
-<nav class="top-nav">
-  <div class="nav-right">
-    <a href="index.html">ABOUT</a>
-    <a href="resume.html">RESUME</a>
-    <a href="portfolio.html"class="active">PORTFOLIO</a>
-    <a href="certificate.html">CERTIFICATE</a>
-    <a href="contact.html">CONTACT</a>
-  </div>
-</nav>
+  <nav class="top-nav">
 
-<!-- ================= SIDEBAR ================= -->
-  <aside class="sidebar">
-    <img src="assets/avatar.jpg" alt="Avatar" class="avatar">
+    <!-- KIRI : ANIMASI -->
+    <div class="nav-fun">
+      <img src="assets/cat.png" alt="mascot" class="nav-mascot" />
+      <div class="nav-status">
+        <span class="dot-online"></span>
+        <span class="status-text">ONLINE</span>
+      </div>
+    </div>
 
-    <h2>Dwi Krisdanarti</h2>
+    <!-- KANAN : MENU -->
+    <div class="nav-right">
+      <a href="index.html">ABOUT</a>
+      <a href="resume.html">RESUME</a>
+      <a href="portfolio.html"class="active">PORTFOLIO</a>
+      <a href="certificate.html">CERTIFICATE</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+
+  </nav>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar fun-sidebar">
+    <video
+      class="avatar avatar-video"
+      src="assets/avatar.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
+
+    <h2 class="typing-name">
+      <span id="typing-text"></span><span class="cursor">▮</span>
+    </h2>
     <span class="role">Data Analyst & Data Science Enthusiast</span>
 
     <div class="info">
@@ -49,16 +70,16 @@
     </div>
     <!-- ================= SOCIAL LINKS ================= -->
     <div class="social-links">
-      <a href="https://github.com/risdaaaa" target="_blank">
-        <img src="assets/icons/github.jpg" alt="GitHub" class="social-icon">
+      <a href="https://github.com/risdaaaa" target="_blank" data-label="GitHub">
+        <img src="assets/icons/github.jpg" class="social-icon">
       </a>
 
-      <a href="https://www.kaggle.com/risdaaaa" target="_blank">
-        <img src="assets/icons/kaggle.png" alt="Kaggle" class="social-icon">
+      <a href="https://www.kaggle.com/risdaaaa" target="_blank" data-label="Kaggle">
+        <img src="assets/icons/kaggle.png" class="social-icon">
       </a>
 
-      <a href="https://www.linkedin.com/in/dwi-krisdanarti/" target="_blank">
-        <img src="assets/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+      <a href="https://www.linkedin.com/in/dwi-krisdanarti/" target="_blank" data-label="LinkedIn">
+        <img src="assets/icons/linkedin.png" class="social-icon">
       </a>
     </div>
 
@@ -99,7 +120,7 @@
 
       <div class="project-links">
         <a href="https://customer-segmentation-risdasproject.streamlit.app/" target="_blank">
-          <img src="assets/icons/play.png" alt="Play Demo">
+          <img src="assets/icons/play.png" alt="Live Demo" class="social-icon live-icon">
         </a>
         <a href="https://github.com/risdaaaa/customer-segmentation?tab=readme-ov-filea" target="_blank">
           <img src="assets/icons/github.jpg" alt="GitHub">
@@ -109,27 +130,35 @@
 
     <!-- Project 2 -->
     <div class="portfolio-card">
-      <img src="assets/projects/project2.jpg" alt="Marketing Analysis" class="project-img">
 
-      <h3>Marketing Channel Analysis</h3>
-      <span class="project-tag">Data Analyst</span>
+      <div class="project-image-link">
+        <img src="assets/loading.jpg"
+            alt="BISINDO Hand Gesture Detection"
+            class="project-img">
+        
+        <span class="progress-badge">ON PROGRESS</span>
+      </div>
+
+      <h3>BISINDO Hand Gesture Detection</h3>
+      <span class="project-tag">Computer Vision</span>
 
       <p>
-        Analysis of multi-channel marketing performance to evaluate
-        campaign effectiveness.
+        Indonesian Sign Language (BISINDO) hand gesture recognition system
+        using YOLO for hand detection and ResNet for gesture classification.
+        Currently under active development.
       </p>
 
       <div class="tech-used">
-        <span>SQL</span>
-        <span>Excel</span>
-        <span>Looker Studio</span>
+        <span>YOLOv8</span>
+        <span>ResNet</span>
+        <span>PyTorch</span>
+        <span>OpenCV</span>
       </div>
 
       <div class="project-links">
-        <a href="https://github.com/risdaaaa" target="_blank">
-          <img src="assets/icons/github.jpg" alt="GitHub">
-        </a>
+        <img src="assets/icons/github.jpg" alt="GitHub (Coming Soon)">
       </div>
+
     </div>
 
     <!-- Project 3 -->
@@ -159,20 +188,165 @@
 
       <div class="project-links">
         <a href="https://dashboard-risdew.streamlit.app/" target="_blank">
-            <img src="assets/icons/play.png" alt="Play Demo">
+          <img src="assets/icons/play.png" alt="Live Demo" class="social-icon live-icon">
         </a>
         <a href="https://github.com/risdaaaa/E-Commerce" target="_blank">
-          <img src="assets/icons/github.png" alt="GitHub">
+          <img src="assets/icons/github.jpg" alt="GitHub">
         </a>
       </div>
     </div>
 
+    <!-- Project 4 -->
+    <div class="portfolio-card">
+
+      <a href="https://lookerstudio.google.com/reporting/275fdb7c-e07f-4ff2-aea8-a5aa59ff1e6b/page/ZApDF"
+        target="_blank"
+        class="project-image-link">
+
+        <img src="assets/projects/project7.png"
+            alt="MLEB Performance Dashboard"
+            class="project-img">
+      </a>
+
+      <h3>MLEB Performance Dashboard</h3>
+      <span class="project-tag">Data Analytics</span>
+
+      <p>
+        Interactive performance monitoring dashboard for MLEB,
+        focusing on revenue, accommodation, facilities usage,
+        visitor categories, and marketing performance.
+        Built to support data-driven operational decisions.
+      </p>
+
+      <div class="tech-used">
+        <span>Looker Studio</span>
+        <span>Data Visualization</span>
+        <span>Business Intelligence</span>
+        <span>Dashboard Design</span>
+      </div>
+
+      <div class="project-links">
+        <a href="https://lookerstudio.google.com/reporting/275fdb7c-e07f-4ff2-aea8-a5aa59ff1e6b/page/ZApDF"
+          target="_blank">
+          <img src="assets/icons/play.png"
+              alt="Live Dashboard"
+              class="live-icon">
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Project 4 -->
+    <div class="portfolio-card">
+      <a href="https://s-box-explorer-kriptografi.streamlit.app/"
+        target="_blank"
+        class="project-image-link">
+
+        <img src="assets/projects/project4.png"
+            alt="S-Box Explorer Cryptography"
+            class="project-img">
+      </a>
+
+      <h3>S-Box Explorer for Cryptography</h3>
+      <span class="project-tag">Cryptography</span>
+
+      <p>
+        Interactive Streamlit-based application to explore and analyze
+        substitution boxes (S-Box) used in cryptographic algorithms,
+        focusing on non-linearity and security properties.
+      </p>
+
+      <div class="tech-used">
+        <span>Python</span>
+        <span>Streamlit</span>
+        <span>Cryptography</span>
+        <span>Data Visualization</span>
+      </div>
+
+      <div class="project-links">
+        <a href="https://s-box-explorer-kriptografi.streamlit.app/" target="_blank">
+          <img src="assets/icons/play.png" alt="Live Demo" class="social-icon live-icon">
+        </a>
+        <a href="https://github.com/risdaaaa" target="_blank">
+          <img src="assets/icons/github.jpg" alt="GitHub">
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="portfolio-card">
+      <a href="https://github.com/skinalyze-capstone"
+        target="_blank"
+        class="project-image-link">
+
+        <img src="assets/projects/project5.png"
+            alt="Skinalyze Capstone Project"
+            class="project-img">
+      </a>
+
+      <h3>Skinalyze — Skin Analysis App</h3>
+      <span class="project-tag">Machine Learning • Capstone Project</span>
+
+      <p>
+        Machine learning–based skin analysis application developed as a
+        capstone project. The system analyzes skin images using computer
+        vision to classify skin conditions and provide personalized
+        skincare recommendations.
+      </p>
+
+      <div class="tech-used">
+        <span>Python</span>
+        <span>TensorFlow</span>
+      </div>
+
+      <div class="project-links">
+        <!-- Repo (main link) -->
+        <a href="https://github.com/skinalyze-capstone" target="_blank">
+          <img src="assets/icons/github.jpg" alt="GitHub">
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="portfolio-card">
+      <a href="https://github.com/risdaaaa/Book-recommendation"
+        target="_blank"
+        class="project-image-link">
+
+        <img src="assets/projects/project6.png"
+            alt="Book Recommendation System"
+            class="project-img">
+      </a>
+
+      <h3>Book Recommendation System</h3>
+      <span class="project-tag">Data Science • Machine Learning</span>
+
+      <p>
+        A book recommendation system that suggests relevant books to users
+        based on similarity and user preferences. The project focuses on
+        data preprocessing, feature extraction, and recommendation logic
+        to deliver personalized reading suggestions.
+      </p>
+
+      <div class="tech-used">
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>Scikit-learn</span>
+        <span>Recommendation System</span>
+      </div>
+
+      <div class="project-links">
+        <a href="https://github.com/risdaaaa/Book-recommendation" target="_blank">
+          <img src="assets/icons/github.jpg" alt="GitHub">
+        </a>
+      </div>
+    </div>
 
   </div>
 </section>
 
 
 </main>
-
+<script src="js/script.js"></script>
 </body>
 </html>

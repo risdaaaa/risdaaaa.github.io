@@ -8,21 +8,42 @@
 <body>
 
 <!-- ================= NAVBAR ================= -->
-<nav class="top-nav">
-  <div class="nav-right">
-    <a href="index.html">ABOUT</a>
-    <a href="resume.html" class="active">RESUME</a>
-    <a href="portfolio.html">PORTFOLIO</a>
-    <a href="certificate.html">CERTIFICATE</a>
-    <a href="contact.html">CONTACT</a>
-  </div>
-</nav>
+  <nav class="top-nav">
 
-<!-- ================= SIDEBAR ================= -->
-  <aside class="sidebar">
-    <img src="assets/avatar.jpg" alt="Avatar" class="avatar">
+    <!-- KIRI : ANIMASI -->
+    <div class="nav-fun">
+      <img src="assets/cat.png" alt="mascot" class="nav-mascot" />
+      <div class="nav-status">
+        <span class="dot-online"></span>
+        <span class="status-text">ONLINE</span>
+      </div>
+    </div>
 
-    <h2>Dwi Krisdanarti</h2>
+    <!-- KANAN : MENU -->
+    <div class="nav-right">
+      <a href="index.html">ABOUT</a>
+      <a href="resume.html" class="active">RESUME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="certificate.html">CERTIFICATE</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+
+  </nav>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar fun-sidebar">
+    <video
+      class="avatar avatar-video"
+      src="assets/avatar.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
+
+    <h2 class="typing-name">
+      <span id="typing-text"></span><span class="cursor">▮</span>
+    </h2>
     <span class="role">Data Analyst & Data Science Enthusiast</span>
 
     <div class="info">
@@ -49,16 +70,16 @@
     </div>
     <!-- ================= SOCIAL LINKS ================= -->
     <div class="social-links">
-      <a href="https://github.com/risdaaaa" target="_blank">
-        <img src="assets/icons/github.jpg" alt="GitHub" class="social-icon">
+      <a href="https://github.com/risdaaaa" target="_blank" data-label="GitHub">
+        <img src="assets/icons/github.jpg" class="social-icon">
       </a>
 
-      <a href="https://www.kaggle.com/risdaaaa" target="_blank">
-        <img src="assets/icons/kaggle.png" alt="Kaggle" class="social-icon">
+      <a href="https://www.kaggle.com/risdaaaa" target="_blank" data-label="Kaggle">
+        <img src="assets/icons/kaggle.png" class="social-icon">
       </a>
 
-      <a href="hhttps://www.linkedin.com/in/dwi-krisdanarti/" target="_blank">
-        <img src="assets/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+      <a href="https://www.linkedin.com/in/dwi-krisdanarti/" target="_blank" data-label="LinkedIn">
+        <img src="assets/icons/linkedin.png" class="social-icon">
       </a>
     </div>
 
@@ -66,8 +87,9 @@
 
 <!-- ================= MAIN ================= -->
 <main class="main">
+  
 
 </main>
-
+<script src="js/script.js"></script>
 </body>
 </html>

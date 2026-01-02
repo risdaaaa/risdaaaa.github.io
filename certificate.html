@@ -8,21 +8,42 @@
 <body>
 
 <!-- ================= NAVBAR ================= -->
-<nav class="top-nav">
-  <div class="nav-right">
-    <a href="index.html">ABOUT</a>
-    <a href="resume.html">RESUME</a>
-    <a href="portfolio.html"class="active">PORTFOLIO</a>
-    <a href="certificate.html">CERTIFICATE</a>
-    <a href="contact.html">CONTACT</a>
-  </div>
-</nav>
+  <nav class="top-nav">
 
-<!-- ================= SIDEBAR ================= -->
-  <aside class="sidebar">
-    <img src="assets/avatar.jpg" alt="Avatar" class="avatar">
+    <!-- KIRI : ANIMASI -->
+    <div class="nav-fun">
+      <img src="assets/cat.png" alt="mascot" class="nav-mascot" />
+      <div class="nav-status">
+        <span class="dot-online"></span>
+        <span class="status-text">ONLINE</span>
+      </div>
+    </div>
 
-    <h2>Dwi Krisdanarti</h2>
+    <!-- KANAN : MENU -->
+    <div class="nav-right">
+      <a href="index.html">ABOUT</a>
+      <a href="resume.html">RESUME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="certificate.html"class="active">CERTIFICATE</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+
+  </nav>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar fun-sidebar">
+    <video
+      class="avatar avatar-video"
+      src="assets/avatar.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
+
+    <h2 class="typing-name">
+      <span id="typing-text"></span><span class="cursor">▮</span>
+    </h2>
     <span class="role">Data Analyst & Data Science Enthusiast</span>
 
     <div class="info">
@@ -49,16 +70,16 @@
     </div>
     <!-- ================= SOCIAL LINKS ================= -->
     <div class="social-links">
-      <a href="https://github.com/risdaaaa" target="_blank">
-        <img src="assets/icons/github.jpg" alt="GitHub" class="social-icon">
+      <a href="https://github.com/risdaaaa" target="_blank" data-label="GitHub">
+        <img src="assets/icons/github.jpg" class="social-icon">
       </a>
 
-      <a href="https://www.kaggle.com/risdaaaa" target="_blank">
-        <img src="assets/icons/kaggle.png" alt="Kaggle" class="social-icon">
+      <a href="https://www.kaggle.com/risdaaaa" target="_blank" data-label="Kaggle">
+        <img src="assets/icons/kaggle.png" class="social-icon">
       </a>
 
-      <a href="https://www.linkedin.com/in/dwi-krisdanarti/" target="_blank">
-        <img src="assets/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+      <a href="https://www.linkedin.com/in/dwi-krisdanarti/" target="_blank" data-label="LinkedIn">
+        <img src="assets/icons/linkedin.png" class="social-icon">
       </a>
     </div>
 
@@ -66,8 +87,110 @@
 
 <!-- ================= MAIN ================= -->
 <main class="main">
+  <!-- ================= CERTIFICATE ================= -->
+  <section class="window">
+    <div class="title-bar">CERTIFICATE.EXE</div>
+
+    <div class="certificate-grid">
+
+      <!-- 1. BNSP -->
+      <div class="certificate-card highlight">
+        <a href="https://www.linkedin.com/in/dwi-krisdanarti/overlay/1767170580452/single-media-viewer/?profileId=ACoAADHLReIBM5pq-K9midu9wA6gnefi7_qh31Q"
+          target="_blank"
+          class="certificate-image-link">
+          <img src="https://media.licdn.com/dms/image/v2/D562DAQH2NmpiB92d2w/profile-treasury-image-shrink_8192_8192/B56Ztzkig_JAAg-/0/1767170518495?e=1767949200&v=beta&t=DqUAIiwJUqdFpfWvGRjzTNLEUILmcVZflOfCKNyuMYY"
+              alt="BNSP Certificate"
+              class="certificate-img">
+        </a>
+        <h3>Associate Data Scientist</h3>
+        <span class="cert-org">BNSP — Indonesia</span>
+        <span class="cert-badge">National Certification</span>
+      </div>
+
+      <!-- 2. PLN -->
+      <div class="certificate-card">
+        <a href="#"
+          target="_blank"
+          class="certificate-image-link">
+          <img src="assets/certificates/pln.png"
+              alt="PLN Internship Certificate"
+              class="certificate-img">
+        </a>
+        <h3>Data Science & Analyst Internship</h3>
+        <span class="cert-org">PT PLN (Persero) UP MLEB</span>
+        <span class="cert-badge">Internship</span>
+      </div>
+
+      <!-- 3. Dibimbing -->
+      <div class="certificate-card">
+        <a href="https://www.linkedin.com/in/dwi-krisdanarti/details/experience/2488412846/multiple-media-viewer/?profileId=ACoAADHLReIBM5pq-K9midu9wA6gnefi7_qh31Q"
+          target="_blank"
+          class="certificate-image-link">
+          <img src="assets/certificates/dibimbing.png"
+              alt="Dibimbing Bootcamp"
+              class="certificate-img">
+        </a>
+        <h3>Data Science Bootcamp</h3>
+        <span class="cert-org">Dibimbing</span>
+      </div>
+
+      <!-- 4. Excel -->
+      <div class="certificate-card">
+        <a href="https://www.linkedin.com/in/dwi-krisdanarti/details/experience/1767167652761/single-media-viewer/?profileId=ACoAADHLReIBM5pq-K9midu9wA6gnefi7_qh31Q"
+          target="_blank"
+          class="certificate-image-link">
+          <img src="assets/certificates/excel.png"
+              alt="Excel Bootcamp"
+              class="certificate-img">
+        </a>
+        <h3>Microsoft Excel Fullstack Intensive Bootcamp</h3>
+        <span class="cert-org">MySkill</span>
+      </div>
+
+      <!-- 5. Bangkit -->
+      <div class="certificate-card">
+        <a href="https://www.linkedin.com/in/dwi-krisdanarti/details/experience/2488410910/multiple-media-viewer/?profileId=ACoAADHLReIBM5pq-K9midu9wA6gnefi7_qh31Q"
+          target="_blank"
+          class="certificate-image-link">
+          <img src="assets/certificates/bangkit.png"
+              alt="Bangkit Academy"
+              class="certificate-img">
+        </a>
+        <h3>Machine Learning Cohort</h3>
+        <span class="cert-org">
+          Bangkit Academy — Google, Tokopedia, Gojek, Traveloka
+        </span>
+      </div>
+
+      <!-- 6. Coursera -->
+      <div class="certificate-card">
+        <a href="https://www.coursera.org/account/accomplishments/verify/7KAE3V3LL9RR"
+          target="_blank"
+          class="certificate-image-link">
+          <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~7KAE3V3LL9RR/CERTIFICATE_LANDING_PAGE~7KAE3V3LL9RR.jpeg"
+              alt="Coursera Certificate"
+              class="certificate-img">
+        </a>
+        <h3>Device-based Models with TensorFlow Lite</h3>
+        <span class="cert-org">Coursera</span>
+      </div>
+
+      <div class="certificate-card">
+        <a href="https://www.coursera.org/account/accomplishments/specialization/B19ARJKEVIIN"
+          target="_blank"
+          class="certificate-image-link">
+          <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~B19ARJKEVIIN/CERTIFICATE_LANDING_PAGE~B19ARJKEVIIN.jpeg"
+              alt="Coursera Specialization"
+              class="certificate-img">
+        </a>
+        <h3>DeepLearning.AI TensorFlow Developer</h3>
+        <span class="cert-org">Coursera</span>
+      </div>
+
+    </div>
+  </section>
 
 </main>
-
+<script src="js/script.js"></script>
 </body>
 </html>

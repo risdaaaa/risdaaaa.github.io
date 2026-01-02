@@ -1,4 +1,6 @@
-/* ================= RESET ================= */
+/* =====================================================
+   RESET & BASE
+===================================================== */
 * {
   box-sizing: border-box;
   font-family: "Courier New", monospace;
@@ -9,29 +11,73 @@ html, body {
   padding: 0;
 }
 
-/* ================= BODY ================= */
 body {
   background: #e6f6f3;
   color: #000;
 }
 
-/* ================= NAVBAR ================= */
+
+/* ================= NAVBAR FINAL ================= */
 .top-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-
   height: 60px;
   background: #eafaf7;
   border-bottom: 3px solid #000;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0 40px;
-
   z-index: 1000;
+}
+
+/* ================= LEFT : FUN ================= */
+.nav-fun {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* mascot */
+.nav-mascot {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+  animation: mascotFloat 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.nav-mascot:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+/* status box */
+.nav-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 2px solid #000;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* online dot */
+.dot-online {
+  width: 8px;
+  height: 8px;
+  background: #00c853;
+  border-radius: 50%;
+  animation: blinkDot 1.2s infinite;
+}
+
+/* ================= RIGHT : MENU ================= */
+.nav-right {
+  display: flex;
+  align-items: center;
 }
 
 .nav-right a {
@@ -47,21 +93,36 @@ body {
   padding: 4px 8px;
 }
 
-/* ================= SIDEBAR ================= */
+/* ================= ANIMATIONS ================= */
+@keyframes mascotFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes blinkDot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
 .sidebar {
   position: fixed;
   top: 60px;
   left: 0;
-
   width: 300px;
   height: calc(100vh - 60px);
   padding: 30px;
-
   background: #eafaf7;
   overflow-y: auto;
+  animation: sidebarEnter 0.6s ease-out;
 }
 
-/* vertical line */
+/* divider */
 .sidebar::after {
   content: "";
   position: absolute;
@@ -70,50 +131,83 @@ body {
   width: 3px;
   height: 100%;
   background: #000;
+  animation: dividerGlow 4s linear infinite;
 }
 
+/* =====================================================
+   AVATAR
+===================================================== */
+
+/* base avatar */
 .avatar {
   width: 140px;
+  height: 140px;
   border: 3px solid #000;
   margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
+/* IMAGE avatar boleh animasi */
+.avatar:not(.avatar-video) {
+  animation: avatarBounce 2.5s ease-in-out infinite;
+}
+
+.avatar:not(.avatar-video):hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+/* VIDEO avatar (STABIL) */
+.avatar-video {
+  object-fit: cover;
+  image-rendering: pixelated;
+  background: #fff;
+
+  /* 🔒 PENTING */
+  animation: none !important;
+  transform: none !important;
+  pointer-events: auto;
+}
+
+/* =====================================================
+   NAME TYPING
+===================================================== */
+.typing-name {
+  font-size: 20px;
+  margin-bottom: 6px;
+  min-height: 28px;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s steps(2) infinite;
+}
+
+/* =====================================================
+   ROLE
+===================================================== */
 .role {
   display: inline-block;
   padding: 6px 12px;
   border: 2px solid #000;
   margin-bottom: 25px;
-}
-/* ================= SOCIAL LINKS ================= */
-
-.social-icon {
-  width: 28px;          /* sebelumnya 20px */
-  height: 28px;
-  image-rendering: pixelated;
-  cursor: pointer;
+  animation: roleBlink 3s step-end infinite;
 }
 
-.social-icon {
-  width: 32px;
-  height: 32px;
-  image-rendering: pixelated;
-}
-
-.social-icon:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 3px 3px 0 #000;
-  background: #fff;
-  padding: 2px;
-}
-
-
-
-/* ================= CONTACT ================= */
+/* =====================================================
+   CONTACT
+===================================================== */
 .contact-item {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 12px 0;
+  transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(4px);
 }
 
 .pixel-icon {
@@ -133,14 +227,128 @@ body {
   padding: 2px 4px;
 }
 
-/* ================= MAIN ================= */
+/* =====================================================
+   SOCIAL
+===================================================== */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  image-rendering: pixelated;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+@keyframes sidebarEnter {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes avatarBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes roleBlink {
+  50% {
+    background: #000;
+    color: #fff;
+  }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes dividerGlow {
+  50% { opacity: 0.4; }
+}
+
+
+/* =====================================================
+   SOCIAL & CONTACT (SIDEBAR)
+===================================================== */
+.social-icon {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.15);
+  box-shadow: 3px 3px 0 #000;
+  background: #fff;
+  padding: 2px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(4px);
+}
+
+.pixel-icon {
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+  transition: transform 0.2s ease;
+}
+
+.contact-item:hover .pixel-icon {
+  transform: scale(1.2);
+}
+
+.contact-link {
+  color: #000;
+  text-decoration: underline;
+}
+
+.contact-link:hover {
+  background: #000;
+  color: #fff;
+  padding: 2px 4px;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
 .main {
   margin-top: 60px;
   margin-left: 300px;
   padding: 40px;
 }
 
-/* ================= WINDOW ================= */
+
+/* =====================================================
+   WINDOW
+===================================================== */
 .window {
   border: 3px solid #000;
   background: #fff;
@@ -154,7 +362,10 @@ body {
   font-weight: bold;
 }
 
-/* ================= ABOUT ================= */
+
+/* =====================================================
+   ABOUT
+===================================================== */
 .about-content {
   padding: 20px;
   line-height: 1.7;
@@ -166,7 +377,10 @@ body {
   padding: 2px 6px;
 }
 
-/* ================= WHAT I'M DOING ================= */
+
+/* =====================================================
+   WHAT I'M DOING
+===================================================== */
 .doing-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -179,6 +393,12 @@ body {
   padding: 20px;
   background: #fff;
   box-shadow: 4px 4px 0 #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doing-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
 }
 
 .doing-icon {
@@ -187,16 +407,10 @@ body {
   image-rendering: pixelated;
 }
 
-.doing-card h3 {
-  margin: 10px 0 6px;
-}
 
-.doing-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 #000;
-}
-
-/* ================= TECH STACK ================= */
+/* =====================================================
+   TECH STACK
+===================================================== */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -209,6 +423,7 @@ body {
   padding: 18px;
   background: #fff;
   box-shadow: 4px 4px 0 #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .tech-card:hover {
@@ -216,7 +431,311 @@ body {
   box-shadow: 6px 6px 0 #000;
 }
 
-/* ================= RESPONSIVE ================= */
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+.timeline {
+  position: relative;
+  padding: 30px 20px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 3px;
+  height: calc(100% - 30px);
+  background: #000;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 40px;
+}
+
+.dot {
+  position: absolute;
+  left: 14px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.time {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   PORTFOLIO
+===================================================== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 24px;
+}
+
+.portfolio-card {
+  border: 3px solid #000;
+  background: #fff;
+  padding: 18px;
+  box-shadow: 4px 4px 0 #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+/* project image */
+.project-image-link {
+  display: block;
+  position: relative;
+}
+
+.project-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border: 3px solid #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-image-link:hover .project-img {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+.project-image-link::after {
+  content: "View Project";
+  position: absolute;
+  inset: 0;
+  background: rgba(90,129,136,0.65);
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.project-image-link:hover::after {
+  opacity: 1;
+}
+
+/* tech used */
+.tech-used {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.tech-used span {
+  border: 2px solid #000;
+  padding: 3px 8px;
+  font-size: 13px;
+}
+
+/* links */
+.project-links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.project-links img {
+  width: 26px;
+  height: 26px;
+  image-rendering: pixelated;
+  cursor: pointer;
+}
+
+.live-icon {
+  width: 34px;
+  height: auto;
+}
+
+/* progress badge */
+.progress-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border: 2px solid #fff;
+}
+
+
+/* =====================================================
+   CERTIFICATE
+===================================================== */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding: 28px;
+}
+
+.certificate-card {
+  border: 3px solid #000;
+  background: #fff;
+  padding: 18px;
+  box-shadow: 4px 4px 0 #000;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certificate-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+.certificate-card.highlight {
+  background: #f2fff8;
+  border-width: 4px;
+}
+
+.certificate-image-link {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.certificate-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border: 3px solid #000;
+}
+
+.cert-org {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cert-badge {
+  margin-top: auto;
+  padding: 6px 10px;
+  border: 2px solid #000;
+  font-size: 12px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+
+/* =====================================================
+   CONTACT PAGE
+===================================================== */
+.contact-wrapper {
+  padding: 28px;
+}
+
+.contact-intro {
+  font-size: 16px;
+  margin-bottom: 26px;
+  max-width: 600px;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.contact-card {
+  border: 3px solid #000;
+  background: #fff;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 4px 4px 0 #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+.contact-big-icon {
+  width: 36px;
+  height: 36px;
+  image-rendering: pixelated;
+  margin-bottom: 10px;
+}
+
+.contact-btn {
+  margin-top: auto;
+  padding: 6px 12px;
+  border: 2px solid #000;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.contact-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.contact-footer {
+  margin-top: 30px;
+  padding-top: 16px;
+  border-top: 2px dashed #000;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+@keyframes sidebarEnter {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes avatarBounce {
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes roleBlink {
+  50% { background: #000; color: #fff; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes dividerGlow {
+  50% { opacity: 0.4; }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 @media (max-width: 900px) {
   .sidebar {
     position: static;
@@ -235,205 +754,4 @@ body {
   .doing-grid {
     grid-template-columns: 1fr;
   }
-}
-
-/* ================= TIMELINE (FINAL FIX) ================= */
-
-.timeline {
-  position: relative;
-  padding: 30px 20px;
-}
-
-/* vertical line */
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  left: 20px;
-  width: 3px;
-  height: calc(100% - 30px);
-  background: #000;
-}
-
-/* item */
-.timeline-item {
-  position: relative;
-  margin-bottom: 40px;
-  padding-left: 60px; /* ⬅️ INI KUNCI UTAMA */
-}
-
-/* bullet */
-.dot {
-  position: absolute;
-  left: 14px;
-  top: 8px;
-  width: 12px;
-  height: 12px;
-  background: #000;
-  border-radius: 50%;
-}
-
-/* content */
-.timeline-content {
-  display: block;
-}
-
-/* title */
-.timeline-content h3 {
-  margin: 0 0 6px;
-  font-size: 17px;
-  line-height: 1.4;
-}
-
-/* role */
-.role-exp {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-
-/* date */
-.time {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 4px 10px;
-  background: #000;
-  color: #fff;
-  font-size: 13px;
-}
-
-/* description */
-.timeline-content p {
-  margin: 6px 0;
-  line-height: 1.6;
-  max-width: 900px;
-}
-
-/* ================= PORTFOLIO ================= */
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  padding: 24px;
-}
-
-.portfolio-card {
-  border: 3px solid #000;
-  background: #fff;
-  padding: 18px;
-  box-shadow: 4px 4px 0 #000;
-}
-
-/* project image */
-.project-img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border: 3px solid #000;
-  margin-bottom: 12px;
-}
-
-/* title */
-.portfolio-card h3 {
-  margin: 6px 0;
-}
-
-/* tag */
-.project-tag {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 4px 8px;
-  background: #000;
-  color: #fff;
-  font-size: 13px;
-}
-
-/* description */
-.portfolio-card p {
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-
-/* tech stack */
-.tech-used {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 14px;
-}
-
-.tech-used span {
-  border: 2px solid #000;
-  padding: 3px 8px;
-  font-size: 13px;
-}
-
-/* icon links */
-.project-links {
-  display: flex;
-  gap: 14px;
-}
-
-.project-links img {
-  width: 22px;
-  height: 22px;
-  image-rendering: pixelated;
-  cursor: pointer;
-}
-
-.project-links img:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 2px 2px 0 #000;
-}
-
-/* hover card */
-.portfolio-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 #000;
-}
-
-/* ================= PROJECT IMAGE LINK ================= */
-
-.project-image-link {
-  display: block;
-}
-
-/* gambar */
-.project-img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border: 3px solid #000;
-  margin-bottom: 12px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-
-/* hover effect */
-.project-image-link:hover .project-img {
-  transform: translate(-3px, -3px);
-  box-shadow: 6px 6px 0 #000;
-}
-
-.project-image-link {
-  position: relative;
-}
-
-.project-image-link::after {
-  content: "View Project";
-  position: absolute;
-  inset: 0;
-  background: rgba(90, 129, 136, 0.65);
-  color: #fff;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.project-image-link:hover::after {
-  opacity: 1;
 }
