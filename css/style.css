@@ -1009,3 +1009,33 @@ ion-icon { display: block;}
   height: 100%;
   background: #000;
 }
+/* =====================================================
+   FILTER
+===================================================== */
+.portfolio-filter {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 24px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 6px 14px;
+  border: 1px solid #000;   /* biar kelihatan tegas */
+  background: #fff;
+  color: #000;              /* ✅ teks jadi hitam */
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.filter-btn:hover {
+  background: #f0f0f0;
+}
+
+.filter-btn.active {
+  background: #00ffd5;
+  color: #000;
+  border-color: #00ffd5;
+}

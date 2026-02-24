@@ -47,12 +47,11 @@
     <span class="role">Data Analyst & Data Science Enthusiast</span>
     <!-- ================= DOWNLOAD CV ================= -->
     <a
-      href="assets/CV_Data Science_Dwi Krisdanarti.pdf"
-      target="_blank"
+      href="contact.html"
       class="cv-btn"
     >
       <img src="assets/icons/download.png" alt="Download CV" class="cv-icon">
-      View My CV
+      Request My CV
     </a>
 
     <div class="info">
@@ -105,10 +104,19 @@
 <section class="window">
   <div class="title-bar">PORTFOLIO.EXE</div>
 
+<!-- ================= FILTER ================= -->
+  <div class="portfolio-filter">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="data-analyst">Data Analyst</button>
+    <button class="filter-btn" data-filter="bi">Business Intelligence</button>
+    <button class="filter-btn" data-filter="ai">AI / ML</button>
+    <button class="filter-btn" data-filter="cv">Computer Vision</button>
+  </div>
+
   <div class="portfolio-grid">
 
     <!-- Project 1 -->
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="ai data-analyst">
       <a href="https://customer-segmentation-risdasproject.streamlit.app/"
         target="_blank"
         class="project-image-link">
@@ -143,7 +151,7 @@
     </div>
 
     <!-- Project 2 -->
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="cv ai">
 
       <div class="project-image-link">
         <img src="assets/loading.jpg"
@@ -176,7 +184,7 @@
     </div>
 
     <!-- Project 3 -->
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="bi data-analyst">
       <a href="https://dashboard-risdew.streamlit.app/"
         target="_blank"
         class="project-image-link">
@@ -211,7 +219,7 @@
     </div>
 
     <!-- Project 4 -->
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="bi data-analyst">
 
       <a href="https://lookerstudio.google.com/reporting/275fdb7c-e07f-4ff2-aea8-a5aa59ff1e6b/page/ZApDF"
         target="_blank"
@@ -251,7 +259,7 @@
     </div>
 
     <!-- Project: Vrinda Store Data Analysis (Excel) -->
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="data-analyst bi">
       <a href="https://github.com/risdaaaa/risdaaaa.github.io/blob/main/Vrinda%20Store%20Data%20Analysis/Vrinda%20Store%20Data%20Analysis.xlsx"
         target="_blank"
         class="project-image-link">
@@ -287,7 +295,7 @@
     </div>
 
     <!-- Project: E-Commerce Sales Dashboard (Tableau) -->
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="bi data-analyst>
       <a href="https://public.tableau.com/views/ECOMMERCESALESDASHBOARD_17337699881020/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link"
         target="_blank"
         class="project-image-link">
@@ -323,7 +331,7 @@
     </div>
 
     <!-- Project 4 -->
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="ai">
       <a href="https://s-box-explorer-kriptografi.streamlit.app/"
         target="_blank"
         class="project-image-link">
@@ -360,7 +368,7 @@
     </div>
 
     <!-- Project 5 -->
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="ai cv">
       <a href="https://github.com/skinalyze-capstone"
         target="_blank"
         class="project-image-link">
@@ -394,7 +402,7 @@
     </div>
 
     <!-- Project 6 -->
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="ai data-analyst">
       <a href="https://github.com/risdaaaa/Book-recommendation"
         target="_blank"
         class="project-image-link">

@@ -90,3 +90,27 @@ setInterval(() => {
     random.style.transform = "";
   }, 300);
 }, 2500);
+
+// Portfolio Filter
+const filterBtns = document.querySelectorAll(".filter-btn");
+const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    // active button
+    filterBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    portfolioCards.forEach(card => {
+      const category = card.dataset.category;
+
+      if (filter === "all" || category.includes(filter)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
