@@ -1,225 +1,949 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Dwi Krisdanarti's resume, including education, professional experience, training, and technical skills."
+  >
+
+  <meta name="author" content="Dwi Krisdanarti">
+
   <title>Dwi Krisdanarti | Resume</title>
-  <link rel="stylesheet" href="css/style.css?v=2">
+
+  <link rel="stylesheet" href="css/style.css?v=4">
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
-  <nav class="top-nav">
+  <!-- ================= NAVBAR ================= -->
+  <nav class="top-nav" aria-label="Main navigation">
 
-    <!-- KIRI : ANIMASI -->
     <div class="nav-fun">
-      <img src="assets/cat.png" alt="mascot" class="nav-mascot" />
+
+      <a href="index.html" aria-label="Go to homepage">
+        <img
+          src="assets/cat.png"
+          alt="Website mascot"
+          class="nav-mascot"
+        >
+      </a>
+
       <div class="nav-status">
-        <span class="dot-online"></span>
-        <span class="status-text">ONLINE</span>
+        <span class="dot-online" aria-hidden="true"></span>
+        <span class="status-text">AVAILABLE</span>
       </div>
+
     </div>
 
-    <!-- KANAN : MENU -->
+
     <div class="nav-right">
+
       <a href="index.html">ABOUT</a>
-      <a href="resume.html" class="active">RESUME</a>
+
+      <a
+        href="resume.html"
+        class="active"
+        aria-current="page"
+      >
+        RESUME
+      </a>
+
       <a href="portfolio.html">PORTFOLIO</a>
+
       <a href="certificate.html">CERTIFICATE</a>
+
       <a href="contact.html">CONTACT</a>
+
     </div>
 
   </nav>
 
+
+
   <!-- ================= SIDEBAR ================= -->
   <aside class="sidebar fun-sidebar">
-    <video
-      class="avatar avatar-video"
-      src="assets/avatar.mp4"
-      autoplay
-      loop
-      muted
-      playsinline
-    ></video>
 
-    <h2 class="typing-name">
-      <span id="typing-text"></span><span class="cursor">▮</span>
-    </h2>
-    <span class="role">Data Analyst & Data Science Enthusiast</span>
-    <!-- ================= DOWNLOAD CV ================= -->
+    <!-- PROFILE PHOTO -->
+    <img
+      src="assets/avatar.jpg"
+      alt="Portrait of Dwi Krisdanarti"
+      class="avatar avatar-video"
+    >
+
+
+    <!-- PROFILE NAME -->
+    <h1 class="typing-name">
+      <span id="typing-text"></span>
+      <span class="cursor" aria-hidden="true">▮</span>
+    </h1>
+
+
+    <!-- PROFILE ROLE -->
+    <span class="role">
+      Data Analyst & Business Intelligence Enthusiast
+    </span>
+
+
+    <!-- REQUEST CV -->
     <a
       href="contact.html"
       class="cv-btn"
     >
-      <img src="assets/icons/download.png" alt="Download CV" class="cv-icon">
+      <img
+        src="assets/icons/download.png"
+        alt=""
+        class="cv-icon"
+      >
       Request My CV
     </a>
 
+
+
+    <!-- CONTACT INFORMATION -->
     <div class="info">
 
+      <h2 class="sidebar-section-title">
+        Contact Information
+      </h2>
+
+
+      <!-- EMAIL -->
       <p class="contact-item">
-        <img src="assets/icons/email.png" alt="Email" class="pixel-icon">
-        <a href="mailto:dwikrisda2@gmail.com" class="contact-link">
+
+        <img
+          src="assets/icons/email.png"
+          alt=""
+          class="pixel-icon"
+        >
+
+        <a
+          href="mailto:dwikrisda2@gmail.com"
+          class="contact-link"
+        >
           dwikrisda2@gmail.com
         </a>
+
       </p>
 
+
+      <!-- WHATSAPP -->
       <p class="contact-item">
-        <img src="assets/icons/wa.png" alt="WhatsApp" class="pixel-icon">
-        <a href="https://wa.me/628133089239" target="_blank" class="contact-link">
+
+        <img
+          src="assets/icons/wa.png"
+          alt=""
+          class="pixel-icon"
+        >
+
+        <a
+          href="https://wa.me/628133089239"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link"
+        >
           +62 813-3089-239
         </a>
+
       </p>
 
+
+      <!-- LOCATION -->
       <p class="contact-item">
-        <img src="assets/icons/location.png" alt="Location" class="pixel-icon">
-        <span>Semarang, Indonesia</span>
+
+        <img
+          src="assets/icons/location.png"
+          alt=""
+          class="pixel-icon"
+        >
+
+        <span>Jakarta, Indonesia</span>
+
       </p>
 
     </div>
-    <!-- ================= SOCIAL LINKS ================= -->
+
+
+
+    <!-- SOCIAL LINKS -->
     <div class="social-links">
-      <a href="https://github.com/risdaaaa" target="_blank" data-label="GitHub">
-        <img src="assets/icons/github.jpg" class="social-icon">
+
+      <a
+        href="https://github.com/risdaaaa"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-label="GitHub"
+        aria-label="GitHub profile"
+      >
+        <img
+          src="assets/icons/github.jpg"
+          class="social-icon"
+          alt="GitHub"
+        >
       </a>
 
-      <a href="https://www.kaggle.com/risdaaaa" target="_blank" data-label="Kaggle">
-        <img src="assets/icons/kaggle.png" class="social-icon">
+
+      <a
+        href="https://www.kaggle.com/risdaaaa"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-label="Kaggle"
+        aria-label="Kaggle profile"
+      >
+        <img
+          src="assets/icons/kaggle.png"
+          class="social-icon"
+          alt="Kaggle"
+        >
       </a>
 
-      <a href="https://www.linkedin.com/in/dwi-krisdanarti/" target="_blank" data-label="LinkedIn">
-        <img src="assets/icons/linkedin.png" class="social-icon">
+
+      <a
+        href="https://www.linkedin.com/in/dwi-krisdanarti/"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-label="LinkedIn"
+        aria-label="LinkedIn profile"
+      >
+        <img
+          src="assets/icons/linkedin.png"
+          class="social-icon"
+          alt="LinkedIn"
+        >
       </a>
 
-      <!-- Tableau Profile -->
-      <a href="https://public.tableau.com/app/profile/dwi.krisdanarti/vizzes" target="_blank" data-label="Tableau">
-        <img src="assets/icons/tableau.png" class="social-icon">
+
+      <a
+        href="https://public.tableau.com/app/profile/dwi.krisdanarti/vizzes"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-label="Tableau"
+        aria-label="Tableau profile"
+      >
+        <img
+          src="assets/icons/tableau.png"
+          class="social-icon"
+          alt="Tableau"
+        >
       </a>
+
     </div>
 
   </aside>
 
-<!-- ================= MAIN ================= -->
-<main class="main">
-  <section class="timeline">
-    <div class="title-wrapper">
-      <div class="icon-box">
-          <ion-icon name="book-outline"></ion-icon>
-      </div>
-      <h3 class="h3">Education</h3>
-    </div>
-    <ol class="timeline-list">
-      <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">MySkill (Microsoft Excel Basic to Advanced )</h4>
-          <span>Sept - Dec 2024</span>
-      </li>
-      <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">Bangkit Academy (Machine Learning)</h4>
-          <span>Sept - Dec 2024</span>
-      </li>
-      <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">Dibimbing (Data Science)</h4>
-          <span>Aug 2024 - Jan 2025</span>
-      </li>
-      <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">Universitas Negeri Semarang</h4>
-          <span>2022 - Now</span>
-      </li>
-    </ol>
-  </section>
 
-  <section class="timeline">
-    <div class="title-wrapper">
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="main">
+
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="timeline" id="education">
+
+      <div class="title-wrapper">
+
+        <div class="icon-box">
+          <ion-icon name="school-outline"></ion-icon>
+        </div>
+
+        <h2 class="h3">Education</h2>
+
+      </div>
+
+
+      <ol class="timeline-list">
+
+        <li class="timeline-item">
+
+          <h3 class="h4 timeline-item-title">
+            Universitas Negeri Semarang
+          </h3>
+
+          <span>2022 – 2026</span>
+
+          <ul class="timeline-bullets">
+
+            <li>
+              Bachelor's Degree in Informatics Engineering.
+            </li>
+
+            <li>
+              Conducted research on Indonesian Sign Language
+              (BISINDO) alphabet recognition using a two-stage
+              deep learning pipeline with YOLOv11s and ResNet34.
+            </li>
+
+            <li>
+              Research published in Jurnal Informatika
+              Teknologi dan Sains (JINTEKS), SINTA 4.
+            </li>
+
+          </ul>
+
+        </li>
+
+      </ol>
+
+    </section>
+
+
+
+    <!-- ================= PROFESSIONAL EXPERIENCE ================= -->
+    <section class="timeline" id="experience">
+
+      <div class="title-wrapper">
+
+        <div class="icon-box">
+          <ion-icon name="briefcase-outline"></ion-icon>
+        </div>
+
+        <h2 class="h3">Professional Experience</h2>
+
+      </div>
+
+
+      <ol class="timeline-list">
+
+
+        <!-- ASTRA CREDIT COMPANIES -->
+        <li class="timeline-item">
+
+          <h3 class="h4 timeline-item-title">
+            Corporate Strategic Intern – Astra Credit Companies
+          </h3>
+
+          <span>May 2026 – Present</span>
+
+          <ul class="timeline-bullets">
+
+            <li>
+              Developed an interactive Power BI dashboard by
+              cleaning, validating, and restructuring fragmented
+              project data from five separate Excel files into
+              one centralized master database.
+            </li>
+
+            <li>
+              Established a standardized data structure and
+              reliable single source of truth, reducing monthly
+              data consolidation and validation time from
+              80 to 16 hours
+              <strong>(80% reduction)</strong>.
+            </li>
+
+            <li>
+              Managed project timeline and milestone monitoring
+              using Monday.com and Excel, consolidating and
+              tracking <strong>5,000+ rows</strong> of project
+              data to monitor implementation progress,
+              deadlines, and project performance.
+            </li>
+
+            <li>
+              Developed a project monitoring solution using
+              Microsoft Power Automate and Microsoft Lists
+              to centralize project progress updates,
+              milestone tracking, and deadline monitoring.
+            </li>
+
+            <li>
+              Developed a project scoring and grading framework
+              for the 2027 project portfolio evaluation,
+              incorporating standardized assessment parameters,
+              benefit classification, financial impact analysis,
+              and backtesting against 2026 project data.
+            </li>
+
+          </ul>
+
+        </li>
+
+
+
+        <!-- MIDI UTAMA INDONESIA -->
+        <li class="timeline-item">
+
+          <h3 class="h4 timeline-item-title">
+            Learning Operation Intern – PT Midi Utama Indonesia Tbk
+          </h3>
+
+          <span>April 2026 – July 2026</span>
+
+          <ul class="timeline-bullets">
+
+            <li>
+              Supported learning operation activities and
+              administrative processes within the Learning
+              Operation team.
+            </li>
+
+            <li>
+              Assisted with learning data management,
+              documentation, and operational reporting.
+            </li>
+
+          </ul>
+
+        </li>
+
+
+
+        <!-- ASPAL POLIMER EMULSINDO -->
+        <li class="timeline-item">
+
+          <h3 class="h4 timeline-item-title">
+            Marketing Support & Web Developer –
+            PT Aspal Polimer Emulsindo
+          </h3>
+
+          <span>May 2025 – August 2025</span>
+
+          <ul class="timeline-bullets">
+
+            <li>
+              Developed and maintained the company website,
+              optimizing page performance and improving
+              product navigation, which increased page
+              load speed by 30%.
+            </li>
+
+            <li>
+              Implemented On-Page and Off-Page SEO strategies,
+              increasing the SEO score from 65 to above 85
+              and improving organic search visibility.
+            </li>
+
+            <li>
+              Created digital content, including landing pages,
+              articles, and promotional banners, contributing
+              to a 25% increase in user engagement.
+            </li>
+
+            <li>
+              Collaborated with the marketing team to execute
+              digital campaigns and analyzed campaign
+              performance using Google Analytics and
+              Google Search Console, reducing bounce
+              rate by 15%.
+            </li>
+
+          </ul>
+
+        </li>
+
+
+
+        <!-- PLN -->
+        <li class="timeline-item">
+
+          <h3 class="h4 timeline-item-title">
+            Data Analyst Intern – PT PLN (Persero) UP MLEB
+          </h3>
+
+          <span>February 2025 – April 2025</span>
+
+          <ul class="timeline-bullets">
+
+            <li>
+              Cleaned, transformed, and integrated
+              multi-source operational data into
+              centralized databases to support
+              business analysis.
+            </li>
+
+            <li>
+              Developed interactive dashboards using
+              Looker Studio to monitor revenue, visitor
+              patterns, and facility utilization,
+              visualizing over Rp1 billion in revenue.
+            </li>
+
+            <li>
+              Delivered data insights to three key
+              divisions to support operational monitoring
+              and business decision-making.
+            </li>
+
+            <li>
+              Collaborated with stakeholders to define
+              KPIs and user requirements, achieving
+              100% user adoption of the dashboard.
+            </li>
+
+            <li>
+              Documented dashboard workflows and created
+              a user manual to support knowledge transfer
+              and consistent dashboard usage.
+            </li>
+
+          </ul>
+
+        </li>
+
+      </ol>
+
+    </section>
+
+
+
+    <!-- ================= TRAINING & DEVELOPMENT ================= -->
+    <section class="timeline" id="training">
+
+      <div class="title-wrapper">
+
         <div class="icon-box">
           <ion-icon name="book-outline"></ion-icon>
         </div>
-        <h3 class="h3">Experience</h3>
-    </div>
-    <ol class="timeline-list">
+
+        <h2 class="h3">Training & Development</h2>
+
+      </div>
+
+
+      <ol class="timeline-list">
+
+
+        <!-- DIBIMBING -->
         <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">PT ASPAL POLIMER EMULSINDO (Marketing & Web Developer)</h4>
-          <span>Mei - Aug 2025</span>
-          <p class="timeline-text">
-          I developed and maintained the company website, optimizing page performance and improving product navigation, which increased page load speed by 30%. I implemented both On-Page and Off-Page SEO strategies that raised the SEO score from 65 to over 85, significantly boosting organic visibility. Additionally, I created digital content including landing pages, articles, and banners, leading to a 25% rise in user engagement. Collaborating with the marketing team, I executed digital campaigns and analyzed their performance using Google Analytics and Search Console, successfully reducing the bounce rate by 15%.                        </p>
-          </p>
+
+          <h3 class="h4 timeline-item-title">
+            Dibimbing – Data Science Bootcamp
+          </h3>
+
+          <span>August 2024 – January 2025</span>
+
+          <ul class="timeline-bullets">
+
+            <li>
+              Participated in an intensive Data Science
+              bootcamp covering data analysis, data
+              preprocessing, and machine learning.
+            </li>
+
+            <li>
+              Completed practical assignments and
+              project-based learning activities.
+            </li>
+
+          </ul>
+
         </li>
+
+
+
+        <!-- BANGKIT -->
         <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">PT PLN (PERSERO) UP MLEB (Data Sciencce & Analyst)</h4>
-          <span>Feb - Apr 2025</span>
-          <p class="timeline-text">
-          I cleaned, transformed, and integrated multi-source operational data into centralized databases, enabling deeper and more accurate business insights. I developed real-time interactive dashboards in Looker Studio to track revenue, visitor patterns, and facility utilization, visualizing over Rp1B in revenue and delivering insights to three key divisions. Collaborating with stakeholders, I defined KPIs and user requirements to enhance dashboard clarity, achieving a 100% user adoption rate. I also documented workflows and created a detailed user manual to ensure effective knowledge transfer and consistent dashboard usage.                        </p>
-          </p>
+
+          <h3 class="h4 timeline-item-title">
+            Bangkit Academy – Machine Learning
+          </h3>
+
+          <span>September 2024 – December 2024</span>
+
+          <ul class="timeline-bullets">
+
+            <li>
+              Participated in the Bangkit Academy
+              Machine Learning learning path.
+            </li>
+
+            <li>
+              Completed 20 mandatory courses through
+              Dicoding and Coursera, covering CNN,
+              NLP, Transfer Learning, Time Series
+              Forecasting, TensorFlow.js, and
+              TensorFlow Lite.
+            </li>
+
+            <li>
+              Graduated with distinction, ranking in
+              the top 10% of more than 1,900 Machine
+              Learning cohort participants.
+            </li>
+
+            <li>
+              Achieved an average grade of 93.60 (A).
+            </li>
+
+          </ul>
+
         </li>
+
+
+
+        <!-- MYSKILL -->
         <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">Google Developer Student Clubs Universitas Negeri Semarang (Member)</h4>
-          <span>2023 - 2024</span>
-          <p class="timeline-text">
-              I contributed to various technical projects and events organized by GDSC, collaborating with teams to improve community engagement and project outcomes. Through active participation in technical meetings and training sessions, I gained practical experience in cloud computing, web development, and machine learning, which strengthened my technical and professional skills.                        </p>
-          </p>
+
+          <h3 class="h4 timeline-item-title">
+            MySkill – Microsoft Excel Basic to Advanced
+          </h3>
+
+          <span>September 2024 – December 2024</span>
+
+          <ul class="timeline-bullets">
+
+            <li>
+              Studied Microsoft Excel functionalities
+              from basic to advanced levels.
+            </li>
+
+            <li>
+              Practiced spreadsheet data processing,
+              formulas, data analysis, and reporting.
+            </li>
+
+          </ul>
+
         </li>
-    </ol>
-  </section>
 
-  <section class="skill">
-  <h3 class="h3 skills-title">Soft Skills</h3>
+      </ol>
 
-  <ul class="skills-list content-card">
-    
-    <li class="skills-item">
+    </section>
+
+
+
+    <!-- ================= ORGANIZATIONAL EXPERIENCE ================= -->
+    <section class="timeline" id="organization">
+
       <div class="title-wrapper">
-        <h5>Problem Solving & Critical Thinking</h5>
-        <data>(Excellent)</data>
-      </div>
-      <div class="skill-progress-bg">
-        <div class="skill-progress-fill" style="width:90%"></div>
-      </div>
-    </li>
 
-    <li class="skills-item">
+        <div class="icon-box">
+          <ion-icon name="people-outline"></ion-icon>
+        </div>
+
+        <h2 class="h3">Organizational Experience</h2>
+
+      </div>
+
+
+      <ol class="timeline-list">
+
+
+        <!-- GDSC -->
+        <li class="timeline-item">
+
+          <h3 class="h4 timeline-item-title">
+            Google Developer Student Clubs (GDSC) –
+            Universitas Negeri Semarang
+          </h3>
+
+          <span>2023 – 2024</span>
+
+          <p class="timeline-text">
+            Member
+          </p>
+
+          <ul class="timeline-bullets">
+
+            <li>
+              Contributed to technical projects and
+              activities organized by GDSC.
+            </li>
+
+            <li>
+              Collaborated with teams to improve
+              community engagement and project outcomes.
+            </li>
+
+            <li>
+              Participated in technical meetings and
+              training sessions covering cloud computing,
+              web development, and machine learning.
+            </li>
+
+          </ul>
+
+        </li>
+
+      </ol>
+
+    </section>
+
+
+
+    <!-- ================= TECHNICAL SKILLS ================= -->
+    <section class="timeline" id="technical-skills">
+
       <div class="title-wrapper">
-        <h5>Analytical Mindset</h5>
-        <data>(Excellent)</data>
-      </div>
-      <div class="skill-progress-bg">
-        <div class="skill-progress-fill" style="width:85%"></div>
-      </div>
-    </li>
 
-    <li class="skills-item">
+        <div class="icon-box">
+          <ion-icon name="construct-outline"></ion-icon>
+        </div>
+
+        <h2 class="h3">Technical Skills</h2>
+
+      </div>
+
+
+      <div class="tech-grid">
+
+
+        <div class="tech-card">
+
+          <h3>Programming Languages</h3>
+
+          <p>
+            Python, SQL, C++, JavaScript, MATLAB
+          </p>
+
+        </div>
+
+
+        <div class="tech-card">
+
+          <h3>Data Analysis</h3>
+
+          <p>
+            Pandas, NumPy, Data Cleaning,
+            Data Preprocessing, Exploratory
+            Data Analysis (EDA)
+          </p>
+
+        </div>
+
+
+        <div class="tech-card">
+
+          <h3>Business Intelligence</h3>
+
+          <p>
+            Power BI, Power BI Service,
+            Looker Studio, Tableau, Excel,
+            Google Sheets
+          </p>
+
+        </div>
+
+
+        <div class="tech-card">
+
+          <h3>Database Management</h3>
+
+          <p>
+            MySQL, PostgreSQL, SQL Server
+          </p>
+
+        </div>
+
+
+        <div class="tech-card">
+
+          <h3>Machine Learning</h3>
+
+          <p>
+            TensorFlow, Keras, Scikit-learn,
+            Deep Learning, CNN, NLP,
+            Computer Vision
+          </p>
+
+        </div>
+
+
+        <div class="tech-card">
+
+          <h3>Microsoft Power Platform</h3>
+
+          <p>
+            Microsoft Lists, Power Automate,
+            Power Apps, SharePoint
+          </p>
+
+        </div>
+
+
+        <div class="tech-card">
+
+          <h3>Web Development</h3>
+
+          <p>
+            HTML, CSS, JavaScript, Streamlit
+          </p>
+
+        </div>
+
+
+        <div class="tech-card">
+
+          <h3>Tools & Platforms</h3>
+
+          <p>
+            Git, GitHub, VS Code,
+            Google Colab, Kaggle,
+            Monday.com
+          </p>
+
+        </div>
+
+
+        <div class="tech-card">
+
+          <h3>Design Tools</h3>
+
+          <p>
+            Canva, Figma
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= SOFT SKILLS ================= -->
+    <section class="skill" id="soft-skills">
+
+      <h2 class="h3 skills-title">
+        Soft Skills
+      </h2>
+
+
+      <ul class="skills-list content-card">
+
+
+        <li class="skills-item">
+
+          <div class="title-wrapper">
+            <h3>Problem Solving & Critical Thinking</h3>
+          </div>
+
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 90%"></div>
+          </div>
+
+        </li>
+
+
+        <li class="skills-item">
+
+          <div class="title-wrapper">
+            <h3>Analytical Thinking</h3>
+          </div>
+
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 85%"></div>
+          </div>
+
+        </li>
+
+
+        <li class="skills-item">
+
+          <div class="title-wrapper">
+            <h3>Attention to Detail</h3>
+          </div>
+
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 90%"></div>
+          </div>
+
+        </li>
+
+
+        <li class="skills-item">
+
+          <div class="title-wrapper">
+            <h3>Data-Driven Decision Making</h3>
+          </div>
+
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 87%"></div>
+          </div>
+
+        </li>
+
+
+        <li class="skills-item">
+
+          <div class="title-wrapper">
+            <h3>Communication & Collaboration</h3>
+          </div>
+
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 85%"></div>
+          </div>
+
+        </li>
+
+
+        <li class="skills-item">
+
+          <div class="title-wrapper">
+            <h3>Adaptability & Continuous Learning</h3>
+          </div>
+
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 90%"></div>
+          </div>
+
+        </li>
+
+      </ul>
+
+    </section>
+
+
+
+    <!-- ================= LANGUAGES ================= -->
+    <section class="timeline" id="languages">
+
       <div class="title-wrapper">
-        <h5>Attention To Detail</h5>
-        <data>(Excellent)</data>
-      </div>
-      <div class="skill-progress-bg">
-        <div class="skill-progress-fill" style="width:90%"></div>
-      </div>
-    </li>
 
-    <li class="skills-item">
-      <div class="title-wrapper">
-        <h5>Data-Driven Decision Making</h5>
-        <data>(Excellent)</data>
-      </div>
-      <div class="skill-progress-bg">
-        <div class="skill-progress-fill" style="width:87%"></div>
-      </div>
-    </li>
+        <div class="icon-box">
+          <ion-icon name="language-outline"></ion-icon>
+        </div>
 
-    <li class="skills-item">
-      <div class="title-wrapper">
-        <h5>Communication</h5>
-        <data>(Excellent)</data>
-      </div>
-      <div class="skill-progress-bg">
-        <div class="skill-progress-fill" style="width:92%"></div>
-      </div>
-    </li>
+        <h2 class="h3">Languages</h2>
 
-  </ul>
-</section>
+      </div>
 
-</main>
-<script src="js/script.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+      <div class="tech-grid">
+
+        <div class="tech-card">
+
+          <h3>Indonesian</h3>
+
+          <p>Native</p>
+
+        </div>
+
+
+        <div class="tech-card">
+
+          <h3>English</h3>
+
+          <p>Intermediate</p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script src="js/script.js"></script>
+
+  <!-- Ionicons -->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+
 </body>
 </html>
